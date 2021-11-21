@@ -1,0 +1,369 @@
+@mixin cajasimagenes ($sombra){
+    margin: 0 auto;
+    max-width: 100%;
+    height: 400PX;
+    width: 400PX;
+    border:rgb(78, 74, 69) 5px solid;
+    filter: $sombra;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 500ms ease;  
+}
+main{
+    width: auto;
+    height: auto;
+    margin: auto;
+    img{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin-bottom: -4px;
+    }
+    .sliceHome .carousel-item{
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    .sliceHome .carousel-item::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: -1;
+    }
+    .container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    .nuevoh2{
+        font-size: 80px;
+        color: #ffffff;
+        margin: 0 0 10px;
+        opacity: 0;
+    }
+    .nuevoParrafo{
+        font-size: 30px;
+        margin: 0;
+        color: #eeeeee;
+        opacity: 0;
+    }
+    .active h2{
+        animation: fadeInLeft .5s ease forwards;
+    }
+    .active p{
+        animation: fadeInRight .5s ease forwards;
+     }
+    .cajauno{
+        background-color: $colorseccion;
+        position: relative;
+    }
+    .cajauno__titulo{
+        font-family: 'Abril Fatface', cursive;
+        font-size: 100px;
+        color:rgb(78, 74, 69);
+        position: relative;
+        text-align: center;
+        padding: 100px;
+    }
+    .cajauno__subtitulo{
+        font-size: 40px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#526f8b;
+        position: relative;
+        padding: 0px 0px 130px 0px;
+        text-align: center;
+    }
+    .cajauno__img{
+        position: relative;
+        width: 100%;
+        height: 100%; 
+    }
+    .tituloPrincipalProd{
+        font-family: 'Abril Fatface', cursive;
+        font-size: 100px;
+        color:rgb(78, 74, 69);
+        position: relative;
+        text-align: center;
+        padding: 100px;
+    }
+    .infoPrincipalProd{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 50px;
+        color:rgb(69, 48, 95);
+        position: relative;
+        padding: 0px 50px 200px 100px;
+        text-align: center;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: $colorseccion;
+        padding: 4em;
+    
+    }
+    .gridcaja{
+        background:rgb(109, 102, 209);
+    
+    }
+    .gridcaja__img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        filter: $colorsombra1; 
+    }
+    .gridcaja__img:hover{
+        transform: scale(1.1);
+        filter: brightness(80%);
+    }
+    .gridcaja2{
+        background: $colorseccion;
+    }
+    .gridcaja2__titulo{
+        font-family: 'Abril Fatface', cursive;
+        font-size: 100px;
+        color:rgb(78, 74, 69);
+        position: relative;
+        text-align: center;
+        padding: 100px;
+        animation-duration: 2s;
+        animation-name: aparecer;
+    }
+    .gridcaja2__subtitulo{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 40px;
+        color:rgb(69, 48, 95);
+        position: relative;
+        padding: 0px 50px 200px 100px;
+        text-align: center;
+    }
+    .flexcontainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px ;
+        overflow: hidden;
+        align-items: center;
+    }
+    .flexcontainer section{
+        width: 47%;
+        margin: 20px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        border: solid $colorborde 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    .caja{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        padding: auto;
+        overflow: visible;
+        display: inline-block;
+        .cajados{
+            @extend .caja;
+            background-color: $colorprincipal;
+            border: solid $colorborde 5px;
+            
+        }
+        .cajatres{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+        .cajacuatro{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }    
+        .cajacinco{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+        .cajaseis{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+        .cajasiete{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+        .cajaocho{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+        .cajanueve{
+            @extend .caja;
+            background-color: $colorprincipal;
+            margin: none;
+        }
+    }   
+    .cajados__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajados__img{
+       @include cajasimagenes($colorsombra1)
+    }    
+    .cajados__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajados__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    
+    .cajatres__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajatres__img{
+        @include cajasimagenes($colorsombra2) 
+    }
+    .cajatres__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajatres__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajacuatro__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajacuatro__img{
+        @include cajasimagenes($colorsombra3) 
+    }
+    .cajacuatro__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajacuatro__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajacinco__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajacinco__img{
+        @include cajasimagenes($colorsombra4) 
+    }
+    .cajacinco__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajacinco__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajaseis__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajaseis__img{
+        @include cajasimagenes($colorsombra1) 
+    }
+    .cajaseis__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajaseis__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajasiete__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajasiete__img{
+        @include cajasimagenes($colorsombra2) 
+    }
+    .cajasiete__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajasiete__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajaocho__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajaocho__img{
+        @include cajasimagenes($colorsombra3) 
+    }
+    .cajaocho__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }    
+    .cajaocho__emoticon{
+        color: rgb(78, 74, 69);
+    }
+    .cajanueve__titulo{
+        color: rgb(78, 74, 69);
+    }
+    .cajanueve__img{
+        @include cajasimagenes($colorsombra4) 
+    }
+    .cajanueve__img:hover{
+        transform: scale(1.0);
+        filter: brightness(80%);
+    }
+    .cajanueve__emoticon{
+        color: rgb(78, 74, 69);
+    }
+
+    @keyframes aparecer {
+        0% {
+        opacity: 0;
+    }
+        100% {
+        opacity: 1;
+    }
+    }
+
+    .formregister {
+        width: 400px;
+        background: #333435;
+        padding: 30px;
+        margin: auto;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        border-radius: 4px;
+        font-family: 'calibri';
+        color: white;
+        box-shadow: 7px 13px 37px yellow;
+    }
+      
+      .formregister__titulo {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+      
+      .formregister__controls{
+        width: 100%;
+        background: #333435;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #1f53c5;
+        font-family: 'calibri';
+        font-size: 18px;
+        color: white;
+    }
+      .formregister__botons {
+        width: 100%;
+        background: #1f53c5;
+        border: none;
+        padding: 12px;
+        color: white;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,43 @@
+header{
+    width: 100%;
+    .navbar-brand img {
+        width: ($ancho/8)-30;
+        float: left;
+    }
+    a{
+        color: #524c56;
+        text-decoration: none;
+        font-family: 'Reggae One', cursive;
+        font-weight: bold;
+    }
+    ul{
+        list-style: none;
+    }
+    nav ul li{
+        font-size: 150%;
+        display: inline-block;
+        padding: 10px;
+    }
+    nav ul li a{
+        color:#17202A;
+        text-decoration: none;
+    }
+    ul ul{
+        position: absolute;
+        display: none;
+    }
+    ul ul li{
+        display: block;
+    }
+    li:hover{
+        color: bisque;
+        font-weight: bold;
+    }
+    a:hover{
+        color:rgb(197, 40, 93);
+    }
+    ul li:hover ul{
+        display: block;
+        background-color: $colorprincipal;
+    }
+}
